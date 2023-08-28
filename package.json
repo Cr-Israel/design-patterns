@@ -1,0 +1,22 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "description": "Study Design Patterns with TypeScript",
+  "main": "index.js",
+  "author": "Carlos Israel",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsup src"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^39.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "tsup": "^7.2.0",
+    "typescript": "*"
+  }
+}
