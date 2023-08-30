@@ -1,7 +1,7 @@
-import { InMemoryDatabaseModule } from './database/in-memory-database-module'
+import { InMemoryDatabaseIIFE } from './database/in-memory-database-iife'
 
 // I no longer need to get the instance
-const inMemoryDbClassic = InMemoryDatabaseModule
+const inMemoryDbClassic = InMemoryDatabaseIIFE
 inMemoryDbClassic.add({ name: 'Israel', age: 20 })
 inMemoryDbClassic.add({ name: 'Vitoria', age: 50 })
 inMemoryDbClassic.add({ name: 'Carlos', age: 40 })
