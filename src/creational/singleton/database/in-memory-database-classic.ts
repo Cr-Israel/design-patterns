@@ -1,17 +1,17 @@
 import { type User } from '../interfaces/User'
 
 export class InMemoryDatabaseClassic {
-  private static instance: InMemoryDatabaseClassic | null = null
+  private static _instance: InMemoryDatabaseClassic | null = null
   private readonly users: User[] = []
 
   private constructor () {}
 
-  static getInstance (): InMemoryDatabaseClassic {
-    if (InMemoryDatabaseClassic.instance === null) {
-      InMemoryDatabaseClassic.instance = new InMemoryDatabaseClassic()
+  static get instance (): InMemoryDatabaseClassic {
+    if (InMemoryDatabaseClassic._instance === null) {
+      InMemoryDatabaseClassic._instance = new InMemoryDatabaseClassic()
     }
 
-    return InMemoryDatabaseClassic.instance
+    return InMemoryDatabaseClassic._instance
   }
 
   add (user: User): void {
@@ -29,7 +29,7 @@ export class InMemoryDatabaseClassic {
   }
 }
 
-// const inMemoryDbClassic = InMemoryDatabaseClassic.getInstance()
+// const inMemoryDbClassic = InMemoryDatabaseClassic.instance
 // inMemoryDbClassic.add({ name: 'Israel', age: 20 })
 // inMemoryDbClassic.add({ name: 'Vitoria', age: 50 })
 // inMemoryDbClassic.add({ name: 'Carlos', age: 40 })
